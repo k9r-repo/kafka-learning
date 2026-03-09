@@ -1,0 +1,30 @@
+# Maven
+custom-smt/target/
+custom-smt/*.jar
+*.class
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# Docker
+.env
+docker-compose.override.yml
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~

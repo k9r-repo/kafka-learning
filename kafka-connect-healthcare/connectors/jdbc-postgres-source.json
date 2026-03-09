@@ -1,0 +1,22 @@
+{
+  "name": "healthcare-postgres-jdbc-source",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+    "tasks.max": "1",
+    "connection.url": "jdbc:postgresql://postgres:5432/healthcare_db",
+    "connection.user": "postgres",
+    "connection.password": "postgres123",
+    "mode": "timestamp+incrementing",
+    "incrementing.column.name": "patient_id",
+    "timestamp.column.name": "updated_at",
+    "table.whitelist": "patients",
+    "topic.prefix": "healthcare.",
+    "poll.interval.ms": "5000",
+    "validate.non.null": "false",
+    "transforms": "maskPII",
+    "transforms.maskPII.type": "com.kalpesh.kafka.transforms.PIIMaskingTransform",
+    "transforms.maskPII.fields": "ssn,email,phone",
+    "transforms.maskPII.mask.char": "*",
+    "transforms.maskPII.add.audit.fields": "true"
+  }
+}
