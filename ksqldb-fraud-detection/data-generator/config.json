@@ -1,0 +1,24 @@
+{
+  "kafka_broker": "localhost:9092",
+  "topic_name": "transactions",
+  "generation_rate_ms": 500,
+  "fraud_injection_rate": 0.15,
+  "countries": ["USA", "Canada", "UK", "Germany", "France", "Japan", "Australia"],
+  "merchant_categories": [
+    "restaurant",
+    "grocery",
+    "gas_station",
+    "online_shopping",
+    "hotel",
+    "airline",
+    "entertainment",
+    "electronics",
+    "pharmacy",
+    "gambling",
+    "crypto_exchange",
+    "money_transfer"
+  ],
+  "high_risk_categories": ["gambling", "crypto_exchange", "money_transfer"],
+  "normal_transaction_range": [5.0, 500.0],
+  "fraud_transaction_range": [1000.0, 10000.0]
+}

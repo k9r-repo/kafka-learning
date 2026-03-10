@@ -1,6 +1,6 @@
 # Maven
-custom-smt/target/
-custom-smt/*.jar
+**/target/
+*.jar
 *.class
 
 # IDE
