@@ -3,6 +3,17 @@
 *.jar
 *.class
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
 # IDE
 .idea/
 *.iml
@@ -23,8 +34,9 @@ logs/
 .DS_Store
 Thumbs.db
 
-# Temporary files
+# Temporary/Personal files
 *.tmp
 *.bak
 *.swp
 *~
+Resume-Updates.md
