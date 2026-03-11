@@ -16,7 +16,7 @@ This repository contains **3 end-to-end Kafka projects** showcasing different as
 |---|---------|-------------|------------------|--------|
 | 1 | [Healthcare Data Pipeline](./kafka-connect-healthcare/) | CDC pipeline with custom PII masking SMT | Kafka Connect, Custom SMT (Java), JDBC Source | ✅ **Complete** |
 | 2 | [KSQLDB Fraud Detection](./ksqldb-fraud-detection/) | Real-time fraud detection with stream processing | KSQLDB, Custom UDF (Java), Windowing, Python | ✅ **Complete** |
-| 3 | Kafka Cluster Operations | Secured multi-broker cluster with monitoring | ACLs, SSL/SASL, Prometheus, Grafana | 📋 **Planned** |
+| 3 | [Kafka Cluster Operations](./kafka-cluster-ops/) | Multi-broker cluster with monitoring & chaos testing | Kafka Cluster, Prometheus, Grafana, Chaos Engineering | ✅ **Complete** |
 
 ---
 
@@ -86,16 +86,40 @@ A production-ready real-time fraud detection system using KSQLDB for stream proc
 
 ---
 
-## 🎯 Project 3: Secured Kafka Cluster Operations
+## 🎯 Project 3: Kafka Cluster Operations & Monitoring
 
-**📁 Directory:** `kafka-cluster-operations/` *(Planned)*
+**📁 Directory:** [`kafka-cluster-ops/`](./kafka-cluster-ops/)
 
-### Planned Features
-- Multi-broker Kafka cluster with replication
-- SSL/SASL authentication and ACL authorization
-- Topic management and partition rebalancing
-- Monitoring with Prometheus and Grafana
-- Zero-downtime upgrades and disaster recovery
+### Overview
+A production-ready Kafka cluster with 3 brokers and comprehensive monitoring infrastructure. Demonstrates cluster operations, fault tolerance, performance tuning, and observability using Prometheus and Grafana.
+
+### Key Features
+- ✅ **3-Broker Kafka Cluster** with replication factor 3
+- ✅ **Zookeeper Ensemble** (3 nodes) for quorum-based coordination
+- ✅ **Full Monitoring Stack:** Prometheus + Grafana + Kafka Exporter
+- ✅ **Custom Grafana Dashboard** with 6 visualization panels
+- ✅ **Chaos Engineering Scripts** for resilience testing
+- ✅ **Performance Benchmarking** tools (producer/consumer throughput)
+- ✅ **Automated Data Generator** (1000 msg/sec across 4 topics)
+- ✅ **Comprehensive Documentation** (architecture, runbook, guides)
+
+### Technologies
+- **Kafka 7.3.0:** Multi-broker cluster with HA configuration
+- **Prometheus 2.42:** Metrics collection and time-series storage
+- **Grafana 9.4.3:** Custom dashboards and visualization
+- **Kafka Exporter:** Metrics scraping from Kafka brokers
+- **Python 3.9:** Automated test data generation
+- **Docker Compose:** 11-service orchestration
+- **PowerShell:** Operational scripts and chaos testing
+
+### Results
+- 🎯 **3/3 Brokers Active** with automatic leader election
+- ⚡ **~1000 Messages/Second** continuous data flow
+- 📊 **6 Grafana Panels** tracking cluster health in real-time
+- 🧪 **Chaos Tests Passed** (broker failure, recovery validation)
+- 📈 **Zero Downtime** during broker failures (tested)
+
+[📖 View Detailed Documentation →](./kafka-cluster-ops/README.md)
 
 ---
 
@@ -106,7 +130,8 @@ A production-ready real-time fraud detection system using KSQLDB for stream proc
 - ✅ Custom Single Message Transforms (SMT) Development
 - ✅ KSQLDB Stream Processing (Windowing, Joins, Aggregations)
 - ✅ Custom UDF Development (Java)
-- 📋 Cluster Administration & Security *(Planned)*
+- ✅ Cluster Administration & Operations
+- ✅ Monitoring & Observability (Prometheus, Grafana)
 
 ### Programming & Development
 - ✅ Java 11 (Kafka Connect API, KSQLDB UDF, Maven)
@@ -125,10 +150,12 @@ A production-ready real-time fraud detection system using KSQLDB for stream proc
 - ✅ Real-time Fraud Detection
 
 ### DevOps & Operations
-- ✅ Container Orchestration
+- ✅ Container Orchestration (Docker Compose)
 - ✅ Service Health Monitoring
 - ✅ Troubleshooting & Debugging
-- 📋 Cluster Management *(Planned)*
+- ✅ Cluster Operations & Management
+- ✅ Chaos Engineering & Resilience Testing
+- ✅ Performance Benchmarking
 
 ---
 
@@ -211,4 +238,4 @@ This repository is for educational and portfolio purposes.
 
 **⭐ If you find this repository helpful, please consider giving it a star!**
 
-*Last Updated: March 10, 2026*
+*Last Updated: March 11, 2026*
